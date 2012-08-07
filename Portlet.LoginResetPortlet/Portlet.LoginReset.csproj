@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1F753783-4F74-4C3A-B916-80B5A697515D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CUS.ICS.LoginReset</RootNamespace>
+    <AssemblyName>Portlet.LoginReset</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'interim|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Jenzabar.Common">
+      <HintPath>..\Libraries\Jenzabar\Jenzabar.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Jenzabar.Framework.Authentication">
+      <HintPath>..\Libraries\Jenzabar\Jenzabar.Framework.Authentication.dll</HintPath>
+    </Reference>
+    <Reference Include="Jenzabar.ICS">
+      <HintPath>..\Libraries\Jenzabar\Jenzabar.ICS.dll</HintPath>
+    </Reference>
+    <Reference Include="Jenzabar.Portal.Framework">
+      <HintPath>..\Libraries\Jenzabar\Jenzabar.Portal.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Jenzabar.Portal.Framework.Web">
+      <HintPath>..\Libraries\Jenzabar\Jenzabar.Portal.Framework.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Jenzabar.Portal.Web">
+      <HintPath>..\Libraries\Jenzabar\Jenzabar.Portal.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\Libraries\Jenzabar\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin_View.ascx.cs">
+      <DependentUpon>Admin_View.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_View.ascx.designer.cs">
+      <DependentUpon>Admin_View.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Default_View.ascx.cs">
+      <DependentUpon>Default_View.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default_View.ascx.designer.cs">
+      <DependentUpon>Default_View.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="EditQuestions_View.ascx.cs">
+      <DependentUpon>EditQuestions_View.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditQuestions_View.ascx.designer.cs">
+      <DependentUpon>EditQuestions_View.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginReset.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ChangePassword_View.ascx.cs">
+      <DependentUpon>ChangePassword_View.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangePassword_View.ascx.designer.cs">
+      <DependentUpon>ChangePassword_View.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin_View.ascx" />
+    <Content Include="Default_View.ascx" />
+    <Content Include="ChangePassword_View.ascx" />
+    <Content Include="EditQuestions_View.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="ActiveDs">
+      <Guid>{97D25DB0-0363-11CF-ABC4-02608C9E7553}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>IF $(ConfigurationName) == oDebug mkdir "\\kmsserver08\e$\Program Files\Jenzabar\ICS.NET\Portal\Portlets\CUS\ICS\$(SolutionName)"
+
+IF $(ConfigurationName) == oDebug copy "$(TargetPath)" "\\kmsserver08\e\e$\Program Files\Jenzabar\ICS.NET\Portal\bin"
+
+IF $(ConfigurationName) == oDebug copy "..\..\*.ascx" "\\kmsserver08\e\e$\Program Files\Jenzabar\ICS.NET\Portal\Portlets\CUS\ICS\$(SolutionName)"
+
+
+IF $(ConfigurationName) == Release mkdir "\\portalplay\e$\Program Files\Jenzabar\ICS.NET\Portal\Portlets\CUS\ICS\$(SolutionName)"
+
+IF $(ConfigurationName) == Release copy "$(TargetPath)" "\\portalplay\e$\Program Files\Jenzabar\ICS.NET\Portal\bin"
+
+IF $(ConfigurationName) == Release copy "..\..\*.ascx" "\\portalplay\e$\Program Files\Jenzabar\ICS.NET\Portal\Portlets\CUS\ICS\$(SolutionName)"</PostBuildEvent>
+  </PropertyGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51467</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+</Project>
